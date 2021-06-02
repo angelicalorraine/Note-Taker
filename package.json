@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "json-server": "^0.16.3"
+    "json-server": "^0.16.3",
+    "uniqid": "^5.3.0"
   },
   "keywords": [],
   "description": "",
