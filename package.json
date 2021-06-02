@@ -3,13 +3,23 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "json-server": "^0.16.3"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelicalorraine/Note-Taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angelicalorraine/Note-Taker/issues"
+  },
+  "homepage": "https://github.com/angelicalorraine/Note-Taker#readme"
 }

@@ -22,14 +22,6 @@ const hide = (elem) => {
   elem.style.display = 'none';
 };
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-app.get('/notes', function (req, res) {
-  res.sendFile(path.join(__dirname, "notes.html"));
-});
-
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
 
