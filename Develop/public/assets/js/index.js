@@ -9,7 +9,7 @@ if (window.location.pathname === '/notes') {
   noteText = document.querySelector('.note-textarea');
   saveNoteBtn = document.querySelector('.save-note');
   newNoteBtn = document.querySelector('.new-note');
-  noteList = document.querySelectorAll('.saved-notes .list-group');
+  noteList = document.querySelectorAll('.list-container .list-group');
 }
 
 // Show an element
@@ -21,6 +21,14 @@ const show = (elem) => {
 const hide = (elem) => {
   elem.style.display = 'none';
 };
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
+app.get('/notes', function (req, res) {
+  res.sendFile(path.join(__dirname, "notes.html"));
+});
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {};
