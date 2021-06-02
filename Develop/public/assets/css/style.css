@@ -1,0 +1,36 @@
+body {
+  font-family: Roboto;
+}
+
+.save-note {
+  display: none;
+}
+.saved-notes {
+  padding: 0px;
+}
+.card-header {
+  width: 100%;
+}
+
+.note-title,
+.note-textarea {
+  width: 100%;
+  border: 0px;
+}
+
+.note-title {
+  height: 60px;
+  font-size: 30px;
+}
+
+.note-text {
+  font-size: 20px;
+}
+
+.note-section {
+  border: 1px solid black;
+}
+
+.saved-notes {
+  border-right: 1px solid black;
+}
