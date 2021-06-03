@@ -37,6 +37,10 @@ h5 {
   font-weight: 700;
 }
 
+li {
+  color: black;
+}
+
 .navbar {
   background: linear-gradient(
     0deg,
