@@ -1,15 +1,54 @@
 body {
   font-family: Roboto;
+  color: #ffffff;
 }
 
+.jumbotron {
+  background-image: linear-gradient(
+      rgba(8, 81, 120, 0.712),
+      rgba(133, 216, 206, 0.753)
+    ),
+    url("../../assets/notes2.png");
+  background-size: cover;
+}
+
+.display-4 {
+  font-size: 5rem !important;
+  color: #ffffff;
+  font-family: bebas neue;
+  text-shadow: 2px 3px #000000ad;
+}
+h4 {
+  font-size: 2.5rem !important;
+  color: #ffffff !important;
+  font-weight: 300;
+  text-shadow: 1px 2px #000000ad;
+}
+
+h5 {
+  font-size: 2rem !important;
+  color: #ffffff !important;
+  font-weight: 300;
+  text-shadow: 1px 2px #000000ad;
+}
+.lead {
+  font-size: 1.5rem !important;
+  color: #181818 !important;
+  font-weight: 700;
+}
+
+.navbar {
+  background: linear-gradient(
+    0deg,
+    rgba(8, 81, 120, 0.781),
+    rgba(133, 216, 206, 0.89)
+  );
+}
 .save-note {
   display: none;
 }
 .saved-notes {
   padding: 0px;
-}
-.card-header {
-  width: 100%;
 }
 
 .note-title,
