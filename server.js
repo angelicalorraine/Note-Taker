@@ -46,18 +46,6 @@ app.post('/api/notes', (req, res) => {
 });
 
 //Delete Note 
-app.delete("/api/notes/:id", function (req, res) {
-    const deleteID = req.params.id;
-    fs.readFile(dbPath, "utf8", function (err, response) {
-        if (err) throw err;
-        let notes = JSON.parse(response);
 
-        res.json(notes.splice(deleteID - 1, 1));
-
-        fs.writeFile(dbPath, JSON.stringify(notes, null, 2), function (err) {
-            if (err) throw err;
-        });
-    });
-});
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
