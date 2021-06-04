@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const fsp = require('fs').promises;
 const uniqid = require('uniqid');
 const dbPath = '/db/db.json';
 
@@ -47,5 +48,31 @@ app.post('/api/notes', (req, res) => {
 
 //Delete Note 
 
+app.delete("/api/notes/:id", async (req, res) => {
+    let noteDelete = req.params.id;
+    let dataFile = path.join(__dirname, dbPath);
+    try {
+        let data = await fsp.readFile(dataFile);
+        let dataArray = JSON.parse(data);
+        // iterate array backwards- .splice() doesn't cause to miss elements of the array
+        let found = false;
+        for (let i = dataArray.length - 1; i >= 0; i--) {
+            if (dataArray[i].id === noteDelete) {
+                found = true;
+                dataArray.splice(i, 1);
+            }
+        }
+        if (found) {
+            await fsp.writeFile(dataFile, JSON.stringify(dataArray));
+            res.send("Successfully deleted");
+        } else {
+            res.status(404).send(`Note id ${noteDelete} not found.`);
+        }
+
+    } catch (e) {
+        console.log(e);
+        res.sendStatus(500);
+    }
+});
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
